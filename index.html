@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AJ REALLITY | Pune Properties</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f4f6f9;color:#222}
+header{background:#142b4a;color:white;padding:22px 15px;text-align:center}
+header h1{margin:0;color:#f4c542}
+header p{margin-bottom:0}
+nav{background:#203e63;padding:14px;text-align:center;color:white}
+main{max-width:900px;margin:20px auto;padding:15px}
+.search{background:white;padding:18px;border-radius:12px}
+input,select,button{width:100%;padding:12px;margin:7px 0;border:1px solid #ccc;border-radius:6px;font-size:16px}
+button{background:#d6a92c;color:#142b4a;font-weight:bold;border:0}
+.card{background:white;border-radius:12px;padding:18px;margin-top:18px;box-shadow:0 2px 8px #ddd}
+.card h2{color:#17385e}
+footer{text-align:center;background:#142b4a;color:white;padding:20px;margin-top:30px}
+</style>
+</head>
+<body>
+<header>
+<h1>AJ REALLITY</h1>
+<p>Your Property Partner in Pune</p>
+</header>
+<nav>FLATS FOR SALE | FLATS FOR RENT</nav>
+<main>
+<section class="search">
+<h2>Find Your Property</h2>
+<select id="type">
+<option value="All">All Properties</option>
+<option value="Rent">For Rent</option>
+<option value="Sale">For Sale</option>
+</select>
+<input id="area" placeholder="Enter area or locality in Pune">
+<button onclick="filterProperties()">Search Properties</button>
+</section>
+<div id="listings"></div>
+</main>
+<footer>
+<p>Contact AJ REALLITY</p>
+<p>Phone: 7709609067</p>
+</footer>
+<script>
+const properties=[];
+function filterProperties(){
+const type=document.getElementById('type').value;
+const area=document.getElementById('area').value.toLowerCase();
+const list=document.getElementById('listings');
+list.innerHTML='<div class="card"><h2>Property Listings</h2><p>Contact AJ REALLITY on 7709609067 for available flats.</p></div>';
+}
+filterProperties();
+</script>
+</body>
+</html>
